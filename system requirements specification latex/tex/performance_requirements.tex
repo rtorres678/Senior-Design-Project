@@ -1,13 +1,61 @@
-Include a header paragraph specific to your product here. Performance requirements address items such as: how fast specific critical operations must complete; how long it takes to start/stop activities; how long the battery must last; maximum time it must take to set up; etc.
+In this section, the performance of the Laser Harp is evaluated. It is very crucial that the laser harp lives up to the standard, the customer expects it to. Response time, startup time, reliability, etc. are some of the factors that are being evaluated to define the performance of the product.
 
-\subsection{Requirement Name}
+\subsection{The device shall have a maximum setup time of 5 minutes.}
 \subsubsection{Description}
-Detailed requirement description...
+The time taken to set up the equipment should be less than 5 minutes. The process includes wiring the necessary components, aligning the laser diodes to photoresistors if not already done, and connecting to power source.
 \subsubsection{Source}
-Source
+Team
 \subsubsection{Constraints}
-Detailed description of applicable constraints...
+Most of the components should already be wired and in position i.e. no breadboard connections required and laser diodes and photoresistors should be already on the frame, so that not a lot work is needed to align the parts in the correct place. There must be an appropriate power source nearby.
 \subsubsection{Standards}
-List of applicable standards
+N/A
 \subsubsection{Priority}
-Priority
+Medium
+
+\subsection{The device shall startup and fully boot within 30 seconds.}
+\subsubsection{Description}
+Once the all the components of the device are setup, the device should take no longer than 30 seconds to be fully operational. Users should be able to see the lasers and play sound by interfering the laser beams.
+\subsubsection{Source}
+Team
+\subsubsection{Constraints}
+All components should be in place and the laser diodes should be pointed towards the photoresistors.
+\subsubsection{Standards}
+N/A
+\subsubsection{Priority}
+Medium
+
+\subsection{The device shall be able to play audio to stereo.}
+\subsubsection{Description}
+The audio output should be able to be redirected towards stereo. Instead of piezo speaker, the audio should come out of stereo without any difficulty.
+\subsubsection{Source}
+Team
+\subsubsection{Constraints}
+The device should be fully operational and necessary outputs must be visible.
+\subsubsection{Standards}
+N/A
+\subsubsection{Priority}
+Low
+
+\subsection{The device should have very low latency between the laser being triggered and resulting audio playback.}
+\subsubsection{Description}
+Once the laser beam is interfered, there should be no or minimal delay in the resulting audio. The sound should vary with respect to the laser that is being triggered. The time taken to hear audio should be less than 100 milliseconds.
+\subsubsection{Source}
+Team
+\subsubsection{Constraints}
+The device should be fully operational, and it should be connected to necessary audio output. No other devices should be playing nearby.
+\subsubsection{Standards}
+N/A
+\subsubsection{Priority}
+High
+
+\subsection{The device should be reliable and should not crash during use.}
+\subsubsection{Description}
+The device should not crash or turn off by itself unless the power source is removed. If adequate power supply is provided and all the parts not corroded, the device should run for few hours without crashing. 
+\subsubsection{Source}
+Team
+\subsubsection{Constraints}
+All the parts should be in good condition. All the connection should be tight and insulated from any external factors. There should be a constant power source.
+\subsubsection{Standards}
+IEEE 1413.1-2002
+\subsubsection{Priority}
+High
