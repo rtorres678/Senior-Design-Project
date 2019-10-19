@@ -1,13 +1,25 @@
-Include a header paragraph specific to your product here. In this section specify anything else that is required for the product to be deemed complete. Include requirements related to customer setup and configuration if not specified in a previous requirement. Add any known requirements related to product architecture/design, such as modularity, extensibility (for future enhancements), or adaptation for a specific programming language. Consider requirements such as portability of your source code to various platforms (Windows, Linux, Unix Mac OS, etc.).
+Since the system will be used by kids and is intended to be highly interactive with kids we must take into account the safety and tailor the system to kids. We must have safe product. Additionally, since we are using a microcontroller we must use a programming language that is acceptable and understandable for the microncontroller. We currently do not have plans for modularity or extensibility. Since most microcontroller use C and C++ for their programming we must use C and C++ for the control language of the system.
 
-\subsection{Requirement Name}
+\subsection{Sharp Edges Mitigation}
 \subsubsection{Description}
-Detailed requirement description...
+The physical device should not have any sharp edges that can be hazardous.
 \subsubsection{Source}
-Source
+Development team
 \subsubsection{Constraints}
-Detailed description of applicable constraints...
+Materials that we use will be sanded down and rounded down to ensure mitigation of hazard
 \subsubsection{Standards}
-List of applicable standards
+N/A
 \subsubsection{Priority}
-Priority
+Moderate
+
+\subsection{Operating System Requirement}
+\subsubsection{Description}
+The software developed for the microcontroller shall be runnable on unix based system.
+\subsubsection{Source}
+Development team
+\subsubsection{Constraints}
+We cannot use microntroller which are not unix based, and don't have digital pins.
+\subsubsection{Standards}
+Follow coding standards for C++ as noted by the gcc compiler and arduino standards.
+\subsubsection{Priority}
+High
