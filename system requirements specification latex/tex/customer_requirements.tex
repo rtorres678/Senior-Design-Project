@@ -1,32 +1,110 @@
 Include a header paragraph specific to your product here. Customer requirements are those required features and functions specified for and by the intended audience for this product. This section establishes, clearly and concisely, the "look and feel" of the product, what each potential end-user should expect the product do and/or not do. Each requirement specified in this section is associated with a specific customer need that will be satisfied. In general Customer Requirements are the directly observable features and functions of the product that will be encountered by its users. Requirements specified in this section are created with, and must not be changed without, specific agreement of the intended customer/user/sponsor.
 
-\subsection{Requirement Name}
+\subsection{Product shall use visible laser beams}
 \subsubsection{Description}
-A detailed description of the feature/function that satisfies the requirement. For example: \textit{The GUI background will be slate blue. This specific color is required in order to ensure that the GUI matches other similar software products offered by the customer. Slate blue is specified as \#007FFF, using six-digit hexadecimal color specification.} It is acceptable and advisable to include drawings/graphics in the description if it aids understanding of the requirement.
+The product shall use laser beams that, when broken/interrupted, will signal the device to produce a tone. An array of laser diodes will be arranged across the top of the device and shine down onto photoresistors that will detect the breaks and relay that information to an onboard microcontroller. The beams shall be made visible through the use of a mister or fogger that allows the laser beam to reflect and appear to shine.
 \subsubsection{Source}
-The source of the requirement (e.g. customer, sponsor, specified team member (by name), federal regulation, local laws, CSE Senior Design project specifications, etc.)
+Customer: Dr. McMurrough
 \subsubsection{Constraints}
-A detailed description of realistic constraints relevant to this requirement. Economic, environmental, social, political, ethical, health \& safety, manufacturability, and sustainability should be discussed as appropriate.
+We will be limited to the type and number of components that can be connected to a single microcontroller. 
 \subsubsection{Standards}
-A detailed description of any specific standards that apply to this requirement (e.g. \textit{NSTM standard xx.xxx.x. color specifications \cite{Rubin2012}}. Standards exist for practically everything (ATC standard fuses, IEEE 802.15.4 embedded wireless, TLS 1.3 encryption, etc.), so be sure that you research and document which ones will be followed in meeting this requirement.
+N/A
 \subsubsection{Priority}
-The priority of this requirement relative to other specified requirements. Use the following priorities:
-\begin{itemize}
-\item Critical (must have or product is a failure)
-\item High (very important to customer acceptance, desirability)
-\item Moderate (should have for proper product functionality);
-\item Low (nice to have, will include if time/resource permits)
-\item Future (not feasible in this version of the product, but should be considered for a future release).
-\end{itemize}
+Critical
 
-\subsection{Requirement Name}
+\subsection{Built-In Speakers}
 \subsubsection{Description}
-Detailed requirement description...
+The product shall have built-in speakers to generate the tones/sounds. These speakers shall be connected to the onboard MIDI synthesizer that controls the sound generation and will be located on the base of the device.
 \subsubsection{Source}
-Source
+Development Team
 \subsubsection{Constraints}
-Detailed description of applicable constraints...
+Space will be a contraint as the base will be of limited size.
 \subsubsection{Standards}
-List of applicable standards
+N/A
 \subsubsection{Priority}
-Priority
+Critical
+
+\subsection{Multiple sounds at once}
+\subsubsection{Description}
+The onboard synthesizer shall have the ability to take the input of two or more laser beams at the same time and output the combined tome to play from the speakers.  
+\subsubsection{Source}
+Development Team
+\subsubsection{Constraints}
+We will be limited by the capabilities of the speakers we use and should find appropriate hardware to meet this requirement within reason.
+\subsubsection{Standards}
+N/A
+\subsubsection{Priority}
+High
+
+
+\subsection{MIDI Device}
+\subsubsection{Description}
+The device shall have the ability to be used as a MIDI device. The device shall be able to connect via USB or a MIDI connector to a MIDI Synthesizer for sound generation. The output of the device shall be a serial MIDI signal.
+\subsubsection{Source}
+Customer: Dr. McMurrough
+\subsubsection{Constraints}
+We will be contrained by the existing protocol for serialized MIDI signals. 
+\subsubsection{Standards}
+MIDI 1.0
+\subsubsection{Priority}
+High
+
+\subsection{Ease of Use}
+\subsubsection{Description}
+The device shall be easy to play and generate sounds in an intuitive manner. Given that this product will be used for outreach and as a tool to keep kids interested in STEM, the product should be intuitive, quick to learn, and easy to use. 
+\subsubsection{Source}
+Customer: Dr. McMurrough
+\subsubsection{Constraints}
+The ease of use will be evaluated with middle to high school students in mind. The device must not be too cumbersome or complex for the typical child in that age group.
+\subsubsection{Standards}
+N/A
+\subsubsection{Priority}
+High
+
+\subsection{Portability}
+\subsubsection{Description}
+The product shall be portable for use in remote outreach events. The product shall be light enough to be carried by a single person. The product will be powered by an onboard power source to eliminate the need for an outlet. The product shall have a handle for ease of carrying. 
+\subsubsection{Source}
+Development Team
+\subsubsection{Constraints}
+A max weight of 50 lbs must not be exceeded. 
+\subsubsection{Standards}
+OSHA recommendations 
+\subsubsection{Priority}
+Moderate
+
+\subsection{Configurable}
+\subsubsection{Description}
+The device shall have the ability to be configured to adjust certain settings. Settings that must be configurable include: volume, pitch, sustain, attack, etc. These settings will be configured using controls on the base of the device. 
+\subsubsection{Source}
+Customer: Dr. McMurrough
+\subsubsection{Constraints}
+Existing devices shall serve as guides for how and what can be configured. 
+\subsubsection{Standards}
+N/A
+\subsubsection{Priority}
+Moderate
+
+\subsection{Preset Instrument Sounds}
+\subsubsection{Description}
+The MIDI Synthesizer shall be preloaded with preset configurations to emulate certain instruments. Instruments to emulate include: Harp, Piano, Guitar, Flute, 808 Drum Kit, Xylophone, etc. Samples of the instruments can be loaded onto the on-board MIDI Synth and selected via a screen and control on the base of the device.
+\subsubsection{Source}
+Customer: Dr. McMurrough
+\subsubsection{Constraints}
+We must accurately simulate the instruments we select. A user must be able to tell which instrument is being played.
+\subsubsection{Standards}
+N/A
+\subsubsection{Priority}
+Moderate
+
+\subsection{Visual Requirement}
+\subsubsection{Description}
+The device shall be visually appealing. The device shall not contain any exposed wiring and should have some sort of finish to look good. 
+\subsubsection{Source}
+Development Team
+\subsubsection{Constraints}
+If the device is made of wood, the wood must be painted and varnished. Electronic components, other than controls and displays, must not be visible. Generally, the device should look like something you would want to use.
+\subsubsection{Standards}
+N/A
+\subsubsection{Priority}
+Moderate
