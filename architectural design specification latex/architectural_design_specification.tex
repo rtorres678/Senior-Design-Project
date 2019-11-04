@@ -4,7 +4,7 @@
 %%% Feel free to distribute this template, but please keep to referal to http://www.howtotex.com/ here.
 %%% February 2011
 %%%
-%%% Modified May 2018 by CDM
+%%% Modified January 2016 by CDM
 
 %%%  Preamble
 \documentclass[11pt,letterpaper]{article}
@@ -22,18 +22,19 @@
 \usepackage{sectsty}
 \usepackage[compact]{titlesec} 
 \usepackage[tablegrid]{vhistory}
+\usepackage{pbox}
 \allsectionsfont{\color{accentcolor}\scshape\selectfont}
 
 %%% Definitions
 \definecolor{accentcolor}{rgb}{0.0,0.0,0.5} 
-\newcommand{\teamname}{Resonance}
-\newcommand{\productname}{Project LTunes}
+\newcommand{\teamname}{Team Name}
+\newcommand{\productname}{Product Name}
 \newcommand{\coursename}{CSE 4316: Senior Design I}
-\newcommand{\semester}{Fall 2019}
-\newcommand{\docname}{System Requirements Specification}
+\newcommand{\semester}{Fall 2015}
+\newcommand{\docname}{Architectural Design Specification}
 \newcommand{\department}{Department of Computer Science \& Engineering}
 \newcommand{\university}{The University of Texas at Arlington}
-\newcommand{\authors}{Amir Dhungana \\ Anish Yonjan \\ Nikhil Purohit \\ Rabinson Shrestha \\ Raul Jimenez \\ Roberto Torres}
+\newcommand{\authors}{Alan Turing \\ Grace Hopper \\ John Von Neumann \\ Ada Lovelace \\ Charles Babbage}
 
 %%% Headers and footers
 \usepackage{fancyhdr}
@@ -69,7 +70,7 @@
 \vspace{0.5 in}
 \begin{figure}[h!]
 	\centering
-   	\includegraphics[width=0.60\textwidth]{images/logo.png}
+   	\includegraphics[width=0.60\textwidth]{images/test_image}
 \end{figure}
 \vspace{0.5 in}
 {\centering \huge \color{accentcolor} \sc \textbf{\teamname \\ \productname} \par}
@@ -84,46 +85,42 @@
 
 %%% Revision History
 \begin{versionhistory}
-  	\vhEntry{0.1}{10.22.2019}{AM|AY|NP|RS|RJ|RT}{document creation}
+  	\vhEntry{0.1}{10.01.2015}{GH}{document creation}
+  	\vhEntry{0.2}{10.05.2015}{AT|GH}{complete draft}
+  	\vhEntry{0.3}{10.12.2015}{AT|GH}{release candidate 1}
+  	\vhEntry{1.0}{10.20.2015}{AT|GH|CB}{official release}
+  	\vhEntry{1.1}{10.31.2015}{AL}{added design review requests}
 \end{versionhistory}
 \newpage
 
 %%% Table of contents
-\setcounter{tocdepth}{3}
+\setcounter{tocdepth}{2}
 \tableofcontents
 \newpage
 
 %%% List of figures and tables (optional)
 \listoffigures
-%\listoftables
+\listoftables
 \newpage
 
-\section{Product Concept}
-\input{tex/product_concept.tex}
+%%% Document sections
+\section{Introduction}
+\input{tex/introduction.tex}
 \newpage
-\section{Product Description}
-\input{tex/product_description.tex}
+\section{System Overview}
+\input{tex/system_overview.tex}
 \newpage
-\section{Customer Requirements}
-\input{tex/customer_requirements.tex}
+\section{Subsystem Definitions \& Data Flow}
+\input{tex/data_flow.tex}
 \newpage
-\section{Packaging Requirements}
-\input{tex/packaging_requirements.tex}
+\section{X Layer Subsystems}
+\input{tex/x_layer_subsystems.tex}
 \newpage
-\section{Performance Requirements}
-\input{tex/performance_requirements.tex}
+\section{Y Layer Subsystems}
+\input{tex/y_layer_subsystems.tex}
 \newpage
-\section{Safety Requirements}
-\input{tex/safety_requirements.tex}
-\newpage
-\section{Maintenance \& Support Requirements}
-\input{tex/maintenance_support_requirements}
-\newpage
-\section{Other Requirements}
-\input{tex/other_requirements.tex}
-\newpage
-\section{Future Items}
-\input{tex/future_items}
+\section{Z Layer Subsystems}
+\input{tex/z_layer_subsystems.tex}
 \newpage
 
 %%% References
