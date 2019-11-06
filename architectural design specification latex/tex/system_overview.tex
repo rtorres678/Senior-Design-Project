@@ -6,11 +6,11 @@ Laser Harp consists of four layers. The first layer is the power system, which i
  \caption{Laser Harp Architectural Layer Diagram}
 \end{figure}
 
-\subsection{Layer X Description}
-Each layer should be described separately in detail. Descriptions should include the features, functions, critical interfaces and interactions of the layer. The description should clearly define the services that the layer provides. Also include any conventions that your team will use in describing the structure: naming conventions for layers, subsystems, modules, and data flows; interface specifications; how layers and subsystems are defined; etc. 
+\subsection{Power System}
+The power system consists of a single component, Battery. It is going to act as a power source for the whole device. The power source would most likely be single or combination of 12V DC 2A batteries.
 
-\subsection{Layer Y Description}
-Each layer should be described separately in detail. Descriptions should include the features, functions, critical interfaces and interactions of the layer. The description should clearly define the services that the layer provides. Also include any conventions that your team will use in describing the structure: naming conventions for layers, subsystems, modules, and data flows; interface specifications; how layers and subsystems are defined; etc. 
+\subsection{Frames & Components}
+Users of the laser harp are going to interact with device using this layer. This layer is going to provide the users with visual and audio output in addition to ways to play the instrument. It consists of laser and receptors, mister and speakers. Lasers acts as both output as well as input medium in the device. Receptors are going to identify the break in the laser beams and transmit the resulting signal towards MIDI converter to be encoded. Lasers are not visible in broad daylight, so  inorder to overcome that mister is being used for visibility and is lodged at the base of the harp. Speakers are the way audience are going to hear the resulting audio. It wil receive input from sound card form the sound module layer. It will be high quality speaker, able to play multiple range of audio clearly.
 
 \subsection{Layer Z Description}
 Each layer should be described separately in detail. Descriptions should include the features, functions, critical interfaces and interactions of the layer. The description should clearly define the services that the layer provides. Also include any conventions that your team will use in describing the structure: naming conventions for layers, subsystems, modules, and data flows; interface specifications; how layers and subsystems are defined; etc. 
