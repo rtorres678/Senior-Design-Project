@@ -1,11 +1,11 @@
-The nature of this product lends itself to creativity and flexability in the requirements gathering process. Throughout the process, thought was given to the purpose and eventual use of the laser harp. Keeping in mind that the end users will be young middle school to high school students who are interested in STEM, we created the following Customer Requirements.   
+The nature of this product lends itself to creativity and flexibility in the requirements gathering process. Throughout the process, thought was given to the purpose and eventual use of the laser harp. Keeping in mind that the end users will be young middle school to high school students who are interested in STEM, we created the following Customer Requirements.
 \subsection{Product shall use visible laser beams}
 \subsubsection{Description}
-The product shall use laser beams that, when broken/interrupted, will signal the device to produce a tone. An array of laser diodes will be arranged across the top of the device and shine down onto photoresistors that will detect the breaks and relay that information to an onboard microcontroller. The beams shall be made visible through the use of a mister or fogger that allows the laser beam to reflect and appear to shine.
+The product shall use laser beams that, when broken/interrupted, will signal the device to produce a tone. An array of laser diodes will be arranged across the top of the device and shine down onto photo-resistors that will detect the breaks and relay that information to an onboard microcontroller. The beams shall be made visible through the use of a mister or fogger that allows the laser beam to reflect and appear to shine.
 \subsubsection{Source}
 Customer: Dr. McMurrough
 \subsubsection{Constraints}
-We will be limited to the type and number of components that can be connected to a single microcontroller. 
+We will be limited to the type and number of components that can be connected to a single microcontroller.
 \subsubsection{Standards}
 N/A
 \subsubsection{Priority}
@@ -13,23 +13,23 @@ Critical
 
 \subsection{Built-In Speakers}
 \subsubsection{Description}
-The product shall have built-in speakers to generate the tones/sounds. These speakers shall be connected to the onboard MIDI synthesizer that controls the sound generation and will be located on the base of the device.
+The product shall have built-in speakers to generate the tones/sounds. These speakers shall be connected to the onboard software synthesizer that controls the sound generation and will be located on the base of the device.
 \subsubsection{Source}
 Development Team
 \subsubsection{Constraints}
-Space will be a contraint as the base will be of limited size.
+Space will be a constraint as the base will be of limited size.
 \subsubsection{Standards}
 N/A
 \subsubsection{Priority}
 Critical
 
-\subsection{Multiple sounds at once}
+\subsection{Polyphony}
 \subsubsection{Description}
-The onboard synthesizer shall have the ability to take the input of two or more laser beams at the same time and output the combined tone to play from the speakers.  
+The onboard synthesizer shall have the ability to take the input of two or more laser beams at the same time and output the combined tone to play from the speakers.
 \subsubsection{Source}
 Development Team
 \subsubsection{Constraints}
-We will be limited by the capabilities of the speakers we use and should find appropriate hardware to meet this requirement within reason.
+We will be limited by the capabilities of the software synthesizer we use, which will the maximum number of voices the synth allows.
 \subsubsection{Standards}
 N/A
 \subsubsection{Priority}
@@ -42,7 +42,7 @@ The device shall have the ability to be used as a MIDI device. The device shall 
 \subsubsection{Source}
 Customer: Dr. McMurrough
 \subsubsection{Constraints}
-We will be contrained by the existing protocol for serialized MIDI signals. 
+We will be constrained by the existing protocol for serialized MIDI signals.
 \subsubsection{Standards}
 MIDI 1.0
 \subsubsection{Priority}
@@ -50,7 +50,7 @@ High
 
 \subsection{Ease of Use}
 \subsubsection{Description}
-The device shall be easy to play and generate sounds in an intuitive manner. Given that this product will be used for outreach and as a tool to keep kids interested in STEM, the product should be intuitive, quick to learn, and easy to use. 
+The device shall be easy to play and generate sounds in an intuitive manner. Given that this product will be used for outreach and as a tool to keep kids interested in STEM, the product should be intuitive, quick to learn, and easy to use.
 \subsubsection{Source}
 Customer: Dr. McMurrough
 \subsubsection{Constraints}
@@ -62,23 +62,23 @@ High
 
 \subsection{Portability}
 \subsubsection{Description}
-The product shall be portable for use in remote outreach events. The product shall be light enough to be carried by a single person. The product will be powered by an onboard power source to eliminate the need for an outlet. The product shall have a handle for ease of carrying. 
+The product shall be portable for use in remote outreach events. The product shall be light enough to be carried by a single person. The product will be powered by an onboard power source to eliminate the need for an outlet. The product shall have a handle for ease of carrying.
 \subsubsection{Source}
 Development Team
 \subsubsection{Constraints}
-A max weight of 50 lbs must not be exceeded. 
+A max weight of 50 lbs must not be exceeded.
 \subsubsection{Standards}
-OSHA recommendations 
+OSHA recommendations
 \subsubsection{Priority}
 Moderate
 
 \subsection{Configurable}
 \subsubsection{Description}
-The device shall have the ability to be configured to adjust certain settings. Settings that must be configurable include: volume, pitch, sustain, attack, etc. These settings will be configured using controls on the base of the device. 
+The device shall have the ability to be configured to adjust certain settings. Settings that must be configurable include: volume, pitch, attack, sustain, release, etc. These settings will be configured using controls on the base of the device.
 \subsubsection{Source}
 Customer: Dr. McMurrough
 \subsubsection{Constraints}
-Existing devices shall serve as guides for how and what can be configured. 
+Existing devices shall serve as guides for how and what can be configured.
 \subsubsection{Standards}
 N/A
 \subsubsection{Priority}
@@ -86,7 +86,7 @@ Moderate
 
 \subsection{Preset Instrument Sounds}
 \subsubsection{Description}
-The MIDI Synthesizer shall be preloaded with preset configurations to emulate certain instruments. Instruments to emulate include: Harp, Piano, Guitar, Flute, 808 Drum Kit, Xylophone, etc. Samples of the instruments can be loaded onto the on-board MIDI Synth and selected via a screen and control on the base of the device.
+The MIDI Synthesizer shall be preloaded with preset configurations to emulate certain instruments. Instruments to emulate include: Harp, Piano, Guitar, Flute, & more.
 \subsubsection{Source}
 Customer: Dr. McMurrough
 \subsubsection{Constraints}
@@ -98,7 +98,7 @@ Moderate
 
 \subsection{Visual Requirement}
 \subsubsection{Description}
-The device shall be visually appealing. The device shall not contain any exposed wiring and should have some sort of finish to look good. 
+The device shall be visually appealing. The device shall not contain any exposed wiring and should have some sort of finish to look good.
 \subsubsection{Source}
 Development Team
 \subsubsection{Constraints}
@@ -107,3 +107,87 @@ If the device is made of wood, the wood must be painted and varnished. Electroni
 N/A
 \subsubsection{Priority}
 Moderate
+
+\subsection{Audio Output & External Output}
+\subsubsection{Description}
+The device shall play audio internally and also offer external output options to play audio on external speakers.
+\subsubsection{Source}
+Development Team
+\subsubsection{Constraints}
+The output is constrained by the sound card capabilities and output options it has.
+\subsubsection{Standards}
+N/A
+\subsubsection{Priority}
+Critical
+
+\subsection{Power and Volume}
+\subsubsection{Description}
+The device will have a volume button to control the output gain. The device shall have a main power off/on button.
+\subsubsection{Source}
+Development Team
+\subsubsection{Constraints}
+N/A
+\subsubsection{Standards}
+The device shall be able to run off a 12 V power supply.
+\subsubsection{Priority}
+Critical
+
+\subsection{Design}
+\subsubsection{Description}
+The device shall look like a harp.
+\subsubsection{Source}
+Customer: Dr. McMurrough
+\subsubsection{Constraints}
+The design is constrained by what we can feasibly manufacture and 3D print.
+\subsubsection{Standards}
+N/A
+\subsubsection{Priority}
+Critical
+
+\subsection{Design Robustness}
+\subsubsection{Description}
+The device shall stand upright without the need for external support.
+\subsubsection{Source}
+Development Team
+\subsubsection{Constraints}
+The device needs to be stable while also having a design that is aesthetically pleasing.
+\subsubsection{Standards}
+N/A
+\subsubsection{Priority}
+Moderate
+
+\subsection{Mass}
+\subsubsection{Description}
+The device shall not weigh over 50 pounds.
+\subsubsection{Source}
+Development Team
+\subsubsection{Constraints}
+The device cannot be too heavy as it needs to be portable.
+\subsubsection{Standards}
+N/A
+\subsubsection{Priority}
+High
+
+\subsection{Speakers & Controls}
+\subsubsection{Description}
+The device shall have the speakers and controls at the base of the base of the device.
+\subsubsection{Source}
+Development Team
+\subsubsection{Constraints}
+The base of the device is where the internals will be kept, which also has the most room for controls that affect the device.
+\subsubsection{Standards}
+N/A
+\subsubsection{Priority}
+High
+
+\subsection{Octave Control}
+\subsubsection{Description}
+The device shall have physical buttons to play lower or higher octaves.
+\subsubsection{Source}
+Development Team
+\subsubsection{Constraints}
+The device must be able to play various pitches of sound, and hence it needs to be able to change octaves on the fly. 
+\subsubsection{Standards}
+N/A
+\subsubsection{Priority}
+High
