@@ -1,0 +1,4 @@
+#! /bin/sh
+fluidsynth -i -s -a alsa /home/pi/Desktop/sf2/JR_sax.sf2 /home/pi/Desktop/sf2/Test_-_test1.mid
+#fluidsynth -i -s -a alsa /home/pi/Desktop/sf2/JR_sax.sf2 &
+sleep 100; aconnect 20: 128:
