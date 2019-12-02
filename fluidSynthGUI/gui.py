@@ -12,15 +12,11 @@ from btn_preset_change import btn_preset_change
 from gain_command_change import gain_command_change
 
 cwd = os.getcwd()
+soundfonts = []
 
-option0 = os.path.join(cwd, 'sf2', 'JR_sax.sf2')
-option1 = os.path.join(cwd, 'sf2', 'JR_organ.sf2')
-option2 = os.path.join(cwd, 'sf2', 'JR_church.SF2')
-option3 = os.path.join(cwd, 'sf2', 'JR_male.sf2')
-option4 = os.path.join(cwd, 'sf2', 'JR_bells.SF2')
-option5 = os.path.join(cwd, 'sf2', 'JR_elepiano.sf2')
-option6 = os.path.join(cwd, 'sf2', 'JR_analog.sf2')
-soundfonts = [option0, option1, option2, option3, option4, option5, option6] 
+for root, dirs, files in os.walk(os.path.join(cwd, 'sf2')):
+    for file in files:
+        soundfonts.append(os.path.join(root, file))
 
 window = Tk()
 window.attributes('-fullscreen', True)
@@ -30,14 +26,14 @@ window.title("Preset Manager")
 current = [0]
 
 #current track first row
-current_sound_static = Label(window, text='Current Sound', font=('monospace', 26))
-current_track = Label(window, text=soundfonts[current[0]].split('/')[-1].split('_')[-1].split('.')[0].title().center(10), font=("monospace", 26))
+current_sound_static = Label(window, text='CURRENT SOUND', font=('monospace', 36, 'bold'))
+current_track = Label(window, text=soundfonts[current[0]].split('/')[-1].split('.')[0].replace('_', ' ').title().center(10), font=("monospace", 36))
 current_sound_static.grid(row=0, column=1)
 current_track.grid(row=1, column=1)
 
 #buttons on second row
-BUTTON_H = 200
-BUTTON_W = 200
+BUTTON_H = 250
+BUTTON_W = 250
 back_arrow_img = PhotoImage(file=os.path.join(cwd,'images' ,'back_arrow.png'))
 forward_arrow_img = PhotoImage(file=os.path.join(cwd,'images' ,'forward_arrow.png'))
 
@@ -59,7 +55,7 @@ forward_arrow_btn.grid(row=2, column=2)
 
 
 #make slider
-gain_slider = Scale(window, from_=10, to=0, width=35, length=200, command= lambda x: gain_command_change(gain_slider.get()))
+gain_slider = Scale(window, from_=10, to=0, width=35, length=250, command= lambda x: gain_command_change(gain_slider.get()))
 gain_slider.set(5)
 gain_slider.grid(row=2, column= 1)
 

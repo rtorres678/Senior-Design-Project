@@ -7,7 +7,7 @@ import socket
 def btn_preset_change(label, soundfonts, current, offset):
 	new_sf2_index = (current[0] + offset) % len(soundfonts)
 	print(new_sf2_index)
-	label.config(text=soundfonts[new_sf2_index].split('/')[-1].split('_')[-1].split('.')[0].title().center(10))
+	label.config(text=soundfonts[current[0]].split('/')[-1].split('.')[0].replace('_', ' ').title().center(10))
 	current.pop()
 	current.append(new_sf2_index)
 
