@@ -38,8 +38,8 @@ current_sound_static.grid(row=0, column=1)
 current_track.grid(row=1, column=1)
 
 #buttons on second row
-BUTTON_H = 350
-BUTTON_W = 275
+BUTTON_H = 250
+BUTTON_W = 225
 back_arrow_img = PhotoImage(file=os.path.join(cwd,'images' ,'back_arrow.png'))
 forward_arrow_img = PhotoImage(file=os.path.join(cwd,'images' ,'forward_arrow.png'))
 
@@ -56,7 +56,7 @@ back_arrow_btn = Button(window, image=back_arrow_img, height=BUTTON_H, width=BUT
 forward_arrow_btn = Button(window, image=forward_arrow_img, height=BUTTON_H, width=BUTTON_W, command= lambda: btn_preset_change(current_track, soundfonts, current, 1))
 
 #position buttons on grid
-back_arrow_btn.grid(row=2, column=0, padx=(10,50))
+back_arrow_btn.grid(row=2, column=0)
 forward_arrow_btn.grid(row=2, column=2)
 
 slider_frame = Frame(window)
@@ -70,16 +70,16 @@ reverb_label.grid(row=1, column=1)
 chorus_label = Label(slider_frame, text='chorus', font=('monospace'))
 chorus_label.grid(row=1, column=2)
 #gain slider
-gain_slider = Scale(slider_frame, from_=10, to=0, width=50, length=350, command= lambda x: gain_command_change(gain_slider.get()))
+gain_slider = Scale(slider_frame, from_=10, to=0, width=50, length=250, command= lambda x: gain_command_change(gain_slider.get()))
 gain_slider.set(2)
 gain_slider.grid(row=0, column=0)
 
 #reverb slider
-rev_slider = Scale(slider_frame, from_=30, to=0, width=50, length=350, command= lambda x: rev_slider_change(rev_slider.get()))
+rev_slider = Scale(slider_frame, from_=30, to=0, width=50, length=250, command= lambda x: rev_slider_change(rev_slider.get()))
 rev_slider.set(0)
 rev_slider.grid(row=0, column=1)
 
-chorus_slider = Scale(slider_frame, from_=30, to=0, width=50, length=350, command= lambda x: chorus_slider_change(chorus_slider.get()))
+chorus_slider = Scale(slider_frame, from_=30, to=0, width=50, length=250, command= lambda x: chorus_slider_change(chorus_slider.get()))
 chorus_slider.set(0)
 chorus_slider.grid(row=0, column=2)
 
