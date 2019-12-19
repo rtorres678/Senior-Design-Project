@@ -21,8 +21,6 @@ for root, dirs, files in os.walk(os.path.join(cwd, 'sf2')):
     for file in files:
         soundfonts.append(os.path.join(root, file))
 
-print(soundfonts)
-
 window = Tk()
 window.attributes('-fullscreen', True)
 window.title("Preset Manager")
