@@ -30,6 +30,9 @@ window.title("Preset Manager")
 # a list so it can be changed in lambda function
 current = [0]
 
+# connect to fluidSynth process
+client_connection = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+client_connection.connect(('127.0.0.1', 9800))
 
 #current track first row
 current_sound_static = Label(window, text='CURRENT SOUND', font=('monospace', 36, 'bold'))
@@ -52,8 +55,8 @@ REDUCER_W = int(IMAGE_W/BUTTON_W) + 1
 back_arrow_img = back_arrow_img.subsample(REDUCER_H, REDUCER_W)
 forward_arrow_img = forward_arrow_img.subsample(REDUCER_H, REDUCER_W)
 
-back_arrow_btn = Button(window, image=back_arrow_img, height=BUTTON_H, width=BUTTON_W, command= lambda: btn_preset_change(current_track, soundfonts, current, -1))
-forward_arrow_btn = Button(window, image=forward_arrow_img, height=BUTTON_H, width=BUTTON_W, command= lambda: btn_preset_change(current_track, soundfonts, current, 1))
+back_arrow_btn = Button(window, image=back_arrow_img, height=BUTTON_H, width=BUTTON_W, command= lambda: btn_preset_change(current_track, soundfonts, current, -1, client_connection))
+forward_arrow_btn = Button(window, image=forward_arrow_img, height=BUTTON_H, width=BUTTON_W, command= lambda: btn_preset_change(current_track, soundfonts, current, 1, client_connection))
 
 #position buttons on grid
 back_arrow_btn.grid(row=2, column=0)
@@ -70,16 +73,16 @@ reverb_label.grid(row=1, column=1)
 chorus_label = Label(slider_frame, text='chorus', font=('monospace'))
 chorus_label.grid(row=1, column=2)
 #gain slider
-gain_slider = Scale(slider_frame, from_=10, to=0, width=50, length=250, command= lambda x: gain_command_change(gain_slider.get()))
+gain_slider = Scale(slider_frame, from_=10, to=0, width=50, length=250, command= lambda x: gain_command_change(gain_slider.get(), client_connection))
 gain_slider.set(2)
 gain_slider.grid(row=0, column=0)
 
 #reverb slider
-rev_slider = Scale(slider_frame, from_=30, to=0, width=50, length=250, command= lambda x: rev_slider_change(rev_slider.get()))
+rev_slider = Scale(slider_frame, from_=30, to=0, width=50, length=250, command= lambda x: rev_slider_change(rev_slider.get(), client_connection))
 rev_slider.set(0)
 rev_slider.grid(row=0, column=1)
 
-chorus_slider = Scale(slider_frame, from_=30, to=0, width=50, length=250, command= lambda x: chorus_slider_change(chorus_slider.get()))
+chorus_slider = Scale(slider_frame, from_=30, to=0, width=50, length=250, command= lambda x: chorus_slider_change(chorus_slider.get(), client_connection))
 chorus_slider.set(0)
 chorus_slider.grid(row=0, column=2)
 
