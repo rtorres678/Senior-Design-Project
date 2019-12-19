@@ -8,7 +8,7 @@ sleep 2; aconnect 20: 128:
 if [ $? -eq 0 ]
 then
     echo "Connection established.\nStarting gui..."
-    lxterminal -e python3 gui.py &
+    lxterminal -e python3 cd /home/pi/Senior-Design-Project/src/pi_code/gui.py &
     exit 0
 else
     echo "Failed to connect. Terminating Fluidsynth..."
