@@ -22,11 +22,11 @@ while True:
     if val == 'a':
         if count != 1:
             count = 1
-            #os.system("lxterminal -e . ./home/pi/Senior-Design-Project/src/test/sound_recording/start.sh -t killMe")
+            os.system("lxterminal -e ~/Senior-Design-Project/src/test/sound_recording/start.sh -t killMe")
             #subprocess.Popen('. ~/Senior-Design-Project/src/test/sound_recording/start.sh', shell=True)
-            func(1)
+            #func(1)
     if val == 'z':
         if count != 0:
             count = 0
             print('2')
-            func(0)
+            #func(0)
