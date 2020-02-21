@@ -1,39 +1,35 @@
-In this section, the layer is described in terms of the hardware and software design. Specific implementation details, such as hardware components, programming languages, software dependencies, operating systems, etc. should be discussed. Any unnecessary items can be ommitted (for example, a pure software module without any specific hardware should not include a hardware subsection). The organization, titles, and content of the sections below can be modified as necessary for the project.
+This layer is responsible for converting the analog signals coming from the layer and receptors subsystem to MIDI signals which can be analyzed by the midi decoder.
 
 \subsection{Layer Hardware}
-A description of any involved hardware components for the layer. For example, if each subsystem is a software process running on an embedded computer, discuss the specifics of that device here. Do not list a hardware component that only exists at the subsystem level (include it in the following sections).
+It consists of Teensy 3.6 micro-controller.
 
 \subsection{Layer Operating System}
-A description of any operating systems required by the layer.
+Teensy micro-controller is running a arduino script to detect the interference in the laser's circuit.
 
 \subsection{Layer Software Dependencies}
-A description of any software dependencies (libraries, frameworks, etc) required by the layer.
+MIDIUSB library is used in order to allow the micro-controller to encode the MIDI signals for the pi.
 
-\subsection{Subsystem 1}
-Descibe at a high level the purpose and basic design of this subsystem. Is it a piece of hardware, a class, a web service, or something else? Note that each of the subsystem items below are meant to be specific to that subystem and not a repeat of anything discussed above for the overall layer.
+\subsection{MIDI Encoder}
+It is C++ arduino script running on Teensy which converts the analog reading to MIDI signals.
 
 \begin{figure}[h!]
 	\centering
- 	\includegraphics[width=0.60\textwidth]{images/subsystem}
- \caption{Example subsystem description diagram}
+ 	\includegraphics[width=0.60\textwidth]{images/MIDI.png}
+ \caption{ MIDI encoder subsystem description diagram}
 \end{figure}
 
 \subsubsection{Subsystem Hardware}
-A description of any involved hardware components for the subsystem.
+Teensy 3.6 180 MHz micro-controller with 32 General purpose DMA channels.
 
 \subsubsection{Subsystem Operating System}
-A description of any operating systems required by the subsystem.
+Arduino 1.8 or similar in order correctly run the script.
 
 \subsubsection{Subsystem Software Dependencies}
-A description of any software dependencies (libraries, frameworks, design software for mechanical parts or circuits, etc) required by the subsystem.
+MIDIUSB library has been used to call functions to send notes or signals to raspberry pi.
 
 \subsubsection{Subsystem Programming Languages}
-A description of any programming languages used by the subsystem.
+Basic C++ arduino language is being is used for reading the signals from the circuit.
 
-\subsubsection{Subsystem Data Structures}
-A description of any classes or other data structures that are worth discussing for the subsystem. For example, data being transmitted from a microcontroller to a PC via USB should be first be assembled into packets. What is the structure of the packets?
 
-\subsubsection{Subsystem Data Processing}
-A description of any algorithms or processing strategies that are worth discussing for the subsystem. If you are implementing a well-known algorithm, list it. If it is something unique to this project, discuss it in greater detail.
 
 

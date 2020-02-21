@@ -1,39 +1,58 @@
-In this section, the layer is described in terms of the hardware and software design. Specific implementation details, such as hardware components, programming languages, software dependencies, operating systems, etc. should be discussed. Any unnecessary items can be ommitted (for example, a pure software module without any specific hardware should not include a hardware subsection). The organization, titles, and content of the sections below can be modified as necessary for the project.
+This layer is going to be the interaction layer between the users and the instrument. It consists of a frame possibly made from wood or 3D printed plastic parts. Lasers and photo-resistors will be lodged in to the cavities of the frame. A mister will be there to increase visibility. Traditional 5mm RGB tri-color LED will act as indicators for which lasers were interrupted. Amazon-Basics speakers with frequency range from 103 Hz - 20 KHz will be used for the output sound.
 
 \subsection{Layer Hardware}
-A description of any involved hardware components for the layer. For example, if each subsystem is a software process running on an embedded computer, discuss the specifics of that device here. Do not list a hardware component that only exists at the subsystem level (include it in the following sections).
+This layer will consist of traditional speakers,USB connected misters, LEDs,laser diodes and photo-resistors.
 
 \subsection{Layer Operating System}
-A description of any operating systems required by the layer.
+Teensy 3.6 will detect the any breakage in the circuit which will be encoded as MIDI signals.
 
 \subsection{Layer Software Dependencies}
-A description of any software dependencies (libraries, frameworks, etc) required by the layer.
+Basic C++ arduino script will be running on the teensy to detect any circuit changes.
 
-\subsection{Subsystem 1}
-Descibe at a high level the purpose and basic design of this subsystem. Is it a piece of hardware, a class, a web service, or something else? Note that each of the subsystem items below are meant to be specific to that subystem and not a repeat of anything discussed above for the overall layer.
+\subsection{Lasers and receptors}
+This consists of laser diodes and photo-resistors connected to a breadboard which is in turn connected to teensy micro controller which detects the lasers' interruption.
 
 \begin{figure}[h!]
 	\centering
- 	\includegraphics[width=0.60\textwidth]{images/subsystem}
- \caption{Example subsystem description diagram}
+ 	\includegraphics[width=0.60\textwidth]{images/Frame.png}
+ \caption{Lasers & Receptors subsystem description diagram}
 \end{figure}
 
 \subsubsection{Subsystem Hardware}
-A description of any involved hardware components for the subsystem.
+Laser diodes will be 6mm 5mW red dot laser head producing 650 nm laser waves running on 5V power supply whereas the photo-resistors are 5 mm GM5539 resistors with spectral peak of 540 nm.
 
 \subsubsection{Subsystem Operating System}
-A description of any operating systems required by the subsystem.
+N/A
 
-\subsubsection{Subsystem Software Dependencies}
-A description of any software dependencies (libraries, frameworks, design software for mechanical parts or circuits, etc) required by the subsystem.
+\subsection{Mister}
+It consists of an AGPtck aluminium mini mist maker which will be submerged in water to produce mists which will act as reflective medium for lasers to increase the visibility.
 
-\subsubsection{Subsystem Programming Languages}
-A description of any programming languages used by the subsystem.
+\begin{figure}[h!]
+	\centering
+ 	\includegraphics[width=0.60\textwidth]{images/Mister.png}
+ \caption{Mister subsystem description diagram}
+\end{figure}
 
-\subsubsection{Subsystem Data Structures}
-A description of any classes or other data structures that are worth discussing for the subsystem. For example, data being transmitted from a microcontroller to a PC via USB should be first be assembled into packets. What is the structure of the packets?
+\subsubsection{Subsystem Hardware}
+A homemade fog machine or a AGPtek mist maker of 1.8 inch diameter with DC 24V power source.
 
-\subsubsection{Subsystem Data Processing}
-A description of any algorithms or processing strategies that are worth discussing for the subsystem. If you are implementing a well-known algorithm, list it. If it is something unique to this project, discuss it in greater detail.
+\subsection{Speakers}
+They will act as the output of the whole instrument which consists of USB powered speakers for portability.
+
+\begin{figure}[h!]
+	\centering
+ 	\includegraphics[width=0.60\textwidth]{images/Speaker.png}
+ \caption{Speakers subsystem description diagram}
+\end{figure}
+
+\subsubsection{Subsystem Hardware}
+USB powered speaker(5V) with simple setup having easy front-access control for power and volume.
+
+
+
+
+
+
+
 
 

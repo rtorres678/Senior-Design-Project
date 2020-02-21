@@ -27,14 +27,14 @@
 
 %%% Definitions
 \definecolor{accentcolor}{rgb}{0.0,0.0,0.5} 
-\newcommand{\teamname}{Team Name}
-\newcommand{\productname}{Product Name}
+\newcommand{\teamname}{Resonance}
+\newcommand{\productname}{Ltunes}
 \newcommand{\coursename}{CSE 4317: Senior Design II}
-\newcommand{\semester}{Spring 2016}
+\newcommand{\semester}{Fall 2019}
 \newcommand{\docname}{Detailed Design Specification}
 \newcommand{\department}{Department of Computer Science \& Engineering}
 \newcommand{\university}{The University of Texas at Arlington}
-\newcommand{\authors}{Alan Turing \\ Grace Hopper \\ John Von Neumann \\ Ada Lovelace \\ Charles Babbage}
+\newcommand{\authors}{Amir Dhungana \\ Anish Yonjan \\ Roberto Torres \\ Raul Jimenez \\ Rabinson Shrestha \\ Nikhil Purohit}
 
 %%% Headers and footers
 \usepackage{fancyhdr}
@@ -85,11 +85,11 @@
 
 %%% Revision History
 \begin{versionhistory}
-  	\vhEntry{0.1}{1.01.2016}{GH}{document creation}
-  	\vhEntry{0.2}{1.05.2016}{AT|GH}{complete draft}
-  	\vhEntry{0.3}{1.12.2016}{AT|GH}{release candidate 1}
-  	\vhEntry{1.0}{1.20.2016}{AT|GH|CB}{official release}
-  	\vhEntry{1.1}{1.31.2016}{AL}{added design review requests}
+  	\vhEntry{0.1}{02.14.2020}{AD}{document creation}
+  	\vhEntry{0.2}{02.20.2020}{AD}{complete draft}
+  	\vhEntry{0.3}{02.21.2020}{AD}{release candidate 1}
+  	\vhEntry{1.0}{02.21.2020}{AD}{official release}
+  
 \end{versionhistory}
 \newpage
 
@@ -112,15 +112,23 @@
 %\section{Subsystem Definitions \& Data Flow}
 %\input{tex/data_flow.tex}
 \newpage
-\section{X Layer Subsystems}
+\section{Power Layer Subsystems}
 \input{tex/x_layer_subsystems.tex}
 \newpage
-\section{Y Layer Subsystems}
+\section{Frame and Component Layer Subsystems}
 \input{tex/y_layer_subsystems.tex}
 \newpage
-\section{Z Layer Subsystems}
+\section{MIDI Layer Subsystems}
 \input{tex/z_layer_subsystems.tex}
 \newpage
+\section{Sound Modules Layer Subsystems}
+\input{tex/w_layer_subsystems.tex}
+\newpage
+\newpage
+\section{User Interface}
+\input{tex/GUI}
+\newpage
+
 \section{Appendix A}
 \input{tex/appendix_a.tex}
 \newpage
@@ -129,5 +137,9 @@
 \bibliographystyle{plain}
 \bibliographystyle{reference/IEEEtran_custom}
 \bibliography{reference/refs}{}
+  Fluidsynth manpage-https://manpages.debian.org/testing/fluidsynth/fluidsynth.1.en.html 
+
+\\*Tkinter- http://effbot.org/tkinterbook/
+
 
 \end{document}
