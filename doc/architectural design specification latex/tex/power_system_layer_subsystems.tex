@@ -1,0 +1,24 @@
+The details about the subsystem included in the power layer are discussed below. We are opting to go with centralizing the raspberry pi as the main power source. It will sort of act as a power source to all the other components and it itself is powered by plugging to an external outlet.  
+
+\subsection{Raspberry Pi}
+Raspberry Pi is the only subsystem component included in this layer. It will act as the power source for all the components. It will be connected to other components via wires and cables.
+
+\subsubsection{Assumptions}
+The Raspberry Pi will be able to provide enough power to run all the components of the instrument for a reasonable amount time without difficulties. It will have access to external outlet to power itself.
+
+\subsubsection{Responsibilities}
+It is responsible for providing adequate power to all the components of the device.
+
+\subsubsection{Subsystem Interfaces}
+Input and output for the Raspberry Pi subsystem are mentioned below.
+
+\begin {table}[H]
+\caption {Subsystem interfaces} 
+\begin{center}
+    \begin{tabular}{ | p{1cm} | p{6cm} | p{3cm} | p{3cm} |}
+    \hline
+    ID & Description & Inputs & Outputs \\ \hline
+    \#xx & Raspberry Pi  & \pbox{3cm}{120V outlet} & \pbox{3cm}{2A DC Power}  \\ \hline
+    \end{tabular}
+\end{center}
+\end{table}

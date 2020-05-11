@@ -26,32 +26,32 @@ A USB to MIDI cable is used to connect the subsystem to encoder.
     \begin{tabular}{ | p{1cm} | p{6cm} | p{3cm} | p{3cm} |}
     \hline
     ID & Description & Inputs & Outputs \\ \hline
-    \#01 & Power supply & \pbox{3cm}{Electricity} & \pbox{3cm}{Power}  \\ \hline
-    \#02 & MIDI Interface & \pbox{3cm}{Power Supply} & \pbox{3cm}{Laser beams}  \\ \hline
-    \#03 & Receptors & \pbox{3cm}{Interference} & \pbox{3cm}{Event Messages/Signals}  \\ \hline
+    \#01 & Laser Diodes & \pbox{3cm}{Power supply} & \pbox{3cm}{Laser beams }  \\ \hline
+    \#02 & Receptors & \pbox{3cm}{Interference} & \pbox{3cm}{Signals}  \\ \hline
+    \#03 & MIDI Interface & \pbox{3cm}{Signals} & \pbox{3cm}{Event Messages }  \\ \hline
     \end{tabular}
 \end{center}
 \end{table}
 
-\subsection{Mister}
-It consists of an AGPtek aluminum mini mist maker which will be submerged into a water container in order to produce fog or mist which enhances the visibility of the lasers. Mister will take power source from an external outlet.
+\subsection{Fogger}
+It consists of a mini vape model that will be produce fog or vape which enhances the visibility of the lasers. It will take power source from Raspberry Pi. It will use the power to convert vape juice inside of it to fog.
 
 \begin{figure}[h!]
 	\centering
- 	\includegraphics[width=0.60\textwidth]{images/Mister}
+ 	\includegraphics[width=0.60\textwidth]{images/fogger}
  \caption{Laser and Receptors subsystem description diagram}
 \end{figure}
 
 \subsubsection{Assumptions}
-It is assumed that there is adequate water supply to submerge the mister. 
+It is assumed that there is enough vape juice inside the fogger and adequate power supply.
 
 \subsubsection{Responsibilities}
 It is responsible for emitting fog or mist which will be used to make the lasers visible to naked eye in well-lit room.
 
 \subsubsection{Subsystem Interfaces}
-Power is given to the mister through an external outlet.
+Power is given to the mister through Raspberry Pi.
 
-Mister takes input from the water container which in turn converted into mist. 
+Fogger takes input from the vape juice which is converted into mist. 
 
 
 \begin {table}[H]
@@ -60,7 +60,7 @@ Mister takes input from the water container which in turn converted into mist.
     \begin{tabular}{ | p{1cm} | p{6cm} | p{3cm} | p{3cm} |}
     \hline
     ID & Description & Inputs & Outputs \\ \hline
-    \#01 & Mist Maker & \pbox{3cm}{Water} & \pbox{3cm}{Mist}  \\ \hline 
+    \#01 & Fogger & \pbox{3cm}{Vape juice} & \pbox{3cm}{Mist}  \\ \hline 
    \end{tabular}
 \end{center}
 \end{table}
@@ -95,4 +95,36 @@ It receives the signals from the sound module and produces the resulting audio o
 \end{center}
 \end{table}
 
+\subsection{Touchscreen Display}
+It consists of a 6" inch touchscreen monitor that is used for toggling between presets and changing the settings. It is also useful for viewing the current settings and preset. The UI is based on Kiwi UI for the display.
+
+\begin{figure}[h!]
+	\centering
+ 	\includegraphics[width=0.60\textwidth]{images/screen}
+ \caption{Laser and Receptors subsystem description diagram}
+\end{figure}
+
+\subsubsection{Assumptions}
+It is powered by the Raspberry Pi and it can take inputs from the screen display. 
+
+\subsubsection{Responsibilities}
+It is responsible for toggling between presets and changing the settings.
+
+\subsubsection{Subsystem Interfaces}
+It is connected directly to the Raspberry Pi via a USB-C cable.
+
+It displays the information on the screen and also takes input from user through the same screen 
+
+
+\begin {table}[H]
+\caption {Subsystem interfaces} 
+\begin{center}
+    \begin{tabular}{ | p{1cm} | p{6cm} | p{3cm} | p{3cm} |}
+    \hline
+    ID & Description & Inputs & Outputs \\ \hline
+    \#01 & Touchscreen Display & \pbox{3cm}{Raspberry Pi} & \pbox{3cm}{display info}  \\ \hline 
+    \#01 & Touchscreen Display & \pbox{3cm}{user input} & \pbox{3cm}{update info}  \\ \hline 
+   \end{tabular}
+\end{center}
+\end{table}
 
