@@ -1,71 +1,30 @@
-In this section, the layer is described in some detail in terms of its specific subsystems. Describe each of the layers and its subsystems in a separate chapter/major subsection of this document. The content of each subsystem description should be similar. Include in this section any special considerations and/or trade-offs considered for the approach you have chosen.
+This layer is associated with reading the MIDI signals and converting it into audio signals required for the speaker to give out proper audio output. This consists of three subsystems MIDI decoder, fluidsynth and sound card.
 
 \subsection{MIDI decoder}
-pending
+MIDI decoder is a driver that gets the MIDI signals to the raspberry pi. It is a bridge software that transfers the encoded data for processing by fluidsynth. 
 \begin{figure}[h!]
 	\centering
- 	\includegraphics[width=0.60\textwidth]{images/subsystem}
- \caption{Example subsystem description diagram}
+ 	\includegraphics[width=0.60\textwidth]{images/MIDI_decoder}
+ \caption{MIDI decoder subsystem diagram}
 \end{figure}
 
 \subsubsection{Assumptions}
-pending
+The drivers are compatible with the raspberry pi OS. 
 
 \subsubsection{Responsibilities}
-pending
+The drivers should successfully decode the MIDI data signals to be able to be processed by the fluidsynth software. There should be no loss of data.
 
 \subsubsection{Subsystem Interfaces}
-pending
+The MIDI decoder drivers are software drivers downloaded to the raspberry pi OS. It doesn't have any sub-system inside it
 
-\begin {table}[H]
-\caption {Subsystem interfaces} 
-\begin{center}
-    \begin{tabular}{ | p{1cm} | p{6cm} | p{3cm} | p{3cm} |}
-    \hline
-    ID & Description & Inputs & Outputs \\ \hline
-    \#xx & Description of the interface/bus & \pbox{3cm}{input 1 \\ input 2} & \pbox{3cm}{output 1}  \\ \hline
-    \#xx & Description of the interface/bus & \pbox{3cm}{N/A} & \pbox{3cm}{output 1}  \\ \hline
-    \end{tabular}
-\end{center}
-\end{table}
-
-\subsection{Speaker}
-The speaker gives the final output of the laser harp. After all the processing of the data in the raspberry pi, the pi sends the final output of the sound signal to the speakers. The speakers produce the desired sound as output. 
-
-\begin{figure}[h!]
-	\centering
- 	\includegraphics[width=0.60\textwidth]{images/subsystem}
- \caption{Example subsystem description diagram}
-\end{figure}
-
-\subsubsection{Assumptions}
-The speaker is connected via USB A cable to the pi. It is also powered by the same battery powering the Raspberry Pi.
-
-\subsubsection{Responsibilities}
-The speaker should produce decent sound output with no interference. It should be loud enough so the sound can be heard in a conference hall. 
-
-\subsubsection{Subsystem Interfaces}
-The speaker gets analog signals from the raspberry pi and converts it into sound waves as output. This is the final output of the system. The speaker is connected via USB A cable to the system.
-
-\begin {table}[H]
-\caption {Subsystem interfaces} 
-\begin{center}
-    \begin{tabular}{ | p{1cm} | p{6cm} | p{3cm} | p{3cm} |}
-    \hline
-    ID & Description & Inputs & Outputs \\ \hline
-    \#xx & Description of the interface/bus & \pbox{3cm}{input 1 \\ input 2} & \pbox{3cm}{output 1}  \\ \hline
-    \#xx & Description of the interface/bus & \pbox{3cm}{N/A} & \pbox{3cm}{output 1}  \\ \hline
-    \end{tabular}
-\end{center}
-\end{table}
 
 \subsection{FluidSynth}
 FluidSynth is a real-time software synthesizer based on the SoundFont 2 specifications and has reached widespread distribution. It converts the MIDI signals to produce desired sound waves.
 
 \begin{figure}[h!]
 	\centering
- 	\includegraphics[width=0.60\textwidth]{images/subsystem}
- \caption{Example subsystem description diagram}
+ 	\includegraphics[width=0.60\textwidth]{images/fluidsynthpng}
+ \caption{FluidSynth subsystem diagram}
 \end{figure}
 
 \subsubsection{Assumptions}
@@ -75,16 +34,27 @@ The software already has default preset sounds built-in. It also has the functio
 The software is used to convert MIDI signals to sound waves. It should have multiple different sound effects and create a wide range of sound octaves in different formats.
 
 \subsubsection{Subsystem Interfaces}
-The software is downloaded and installed into the raspberry pi. It is supported by the Raspian OS.
+The software is downloaded and installed into the raspberry pi. It is supported by the raspberry pi OS.
 
-\begin {table}[H]
-\caption {Subsystem interfaces} 
-\begin{center}
-    \begin{tabular}{ | p{1cm} | p{6cm} | p{3cm} | p{3cm} |}
-    \hline
-    ID & Description & Inputs & Outputs \\ \hline
-    \#xx & Description of the interface/bus & \pbox{3cm}{input 1 \\ input 2} & \pbox{3cm}{output 1}  \\ \hline
-    \#xx & Description of the interface/bus & \pbox{3cm}{N/A} & \pbox{3cm}{output 1}  \\ \hline
-    \end{tabular}
-\end{center}
-\end{table}
+
+\subsection{Sound Card}
+The sound card is integrated into the raspberry pi as drivers. It converts the data outputted by FluidSynth to sound data which is released through the speaker as the final output.
+
+\begin{figure}[h!]
+	\centering
+ 	\includegraphics[width=0.60\textwidth]{images/soundcard}
+ \caption{Sound Card subsystem diagram}
+\end{figure}
+
+\subsubsection{Assumptions}
+The sound card drivers are already built-in and integrated to the raspberry pi.
+
+\subsubsection{Responsibilities}
+The sound card should handle decent amount of data set. It should be able to produce a wide variety of sound data with different wavelengths.
+
+\subsubsection{Subsystem Interfaces}
+The sound card drivers are built-in software built-in to the raspberry pi OS. It doesn't have any sub-system inside it.
+
+
+
+
