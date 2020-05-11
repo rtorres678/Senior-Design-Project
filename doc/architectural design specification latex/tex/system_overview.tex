@@ -7,14 +7,15 @@ Laser Harp consists of four layers. The first layer is the power system, which i
 \end{figure}
 
 \subsection{Power System}
-The power system consists of a single component, Battery. It is going to act as a power source for the whole device. The power source would most likely be single or combination of 12V DC 2A batteries.
+The whole product is built around its CPU, raspberry pi. It is going to act as a power source for the whole device. The raspberry pi is going to have a cable that can be plugged in to any external outlet.
 
 
 \subsection{Frames and Components}
-Users of the laser harp are going to interact with device using this layer. This layer is going to provide the users with visual and audio output in addition to ways to play the instrument. It consists of laser and receptors, mister and speakers. Lasers acts as both output as well as input medium in the device. Receptors are going to identify the break in the laser beams and transmit the resulting signal towards MIDI converter to be encoded. Lasers are not visible in broad daylight, so  in order to overcome that mister is being used for visibility and is lodged at the base of the harp. Speakers are the way audience are going to hear the resulting audio. It will receive input from sound card form the sound module layer. It will be high quality speaker, able to play multiple range of audio clearly.
-
-\subsection{Sound Module}
-This layer is associated with reading the MIDI signals and converting it into audio signals required for the speaker to give out proper audio output. This consists of three subsystems MIDI decoder, fluid synth and sound card. MIDI decoder changes the signals from the MIDI encoder and passes it on to fluid synth. Fluid synth which is enclosed in the raspberry pie is a software that allows the user to control speed, frequency and other characteristics of sound to be produced. Sound card comprises of drivers that enable the raspberry pie to generate audio output.
+Users of the laser harp are going to interact with device using this layer. This layer is going to provide the users with visual and audio output in addition to ways to play the instrument. It consists of laser and receptors, fogger, a touchscreen and speakers. Lasers acts as  the input medium in the device. Receptors are going to identify the break in the laser beams and transmit the resulting signal towards MIDI converter to be encoded. Lasers are not visible in broad daylight, so  in order to overcome that mister is being used for visibility and is lodged at the base of the harp. Speakers are the way audience are going to hear the resulting audio. It will receive input from sound card form the sound module layer. It will be high quality speaker, able to play multiple range of audio clearly. There will also be a 6-inch touchscreen display to toggle between presets and adjust sound effects such as gain and reverb.
 
 \subsection{MIDI converter}
-This layer is connected to the receptors of the frame and components layer. The interference signal caught by those receptors is changed into MIDI signal by MIDI encoder subsystem lodged in the layer. It is will housed inside a teensy micro controller or the raspberry pie.
+This layer is connected to the receptors of the frame and components layer. The interference signal caught by those receptors is changed into MIDI signal by MIDI encoder subsystem lodged in the layer. It is will housed inside a teensy micro controller or the raspberry pi.
+
+\subsection{Sound Module}
+This layer is associated with reading the MIDI signals and converting it into audio signals required for the speaker to give out proper audio output. This consists of three subsystems MIDI decoder, fluid synth and sound card. MIDI decoder changes the signals from the MIDI encoder and passes it on to fluid synth. Fluid synth which is enclosed in the raspberry pi is a software that allows the user to control speed, frequency and other characteristics of sound to be produced. Sound card comprises of drivers that enable the raspberry pi to generate audio output.
+
